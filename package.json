@@ -1,0 +1,19 @@
+{
+  "name": "secure-finality-tools",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "tx:test": "node scripts/secure-tx-test.mjs",
+    "secure:advance": "node scripts/advance-secure-up-to.mjs"
+  },
+  "dependencies": {
+    "@polkadot/api": "^16.4.6",
+    "@polkadot/util-crypto": "^13.5.6"
+  }
+}

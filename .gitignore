@@ -1,0 +1,54 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+# Keep your lockfile committed for reproducible installs
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Build & caches
+dist/
+build/
+lib/
+out/
+.tmp/
+temp/
+cache/
+.sourcemaps/
+.parcel-cache/
+.turbo/
+.vite/
+.eslintcache
+.stylelintcache
+.prettier-cache
+*.tsbuildinfo
+
+# Coverage & test artifacts
+coverage/
+.nyc_output/
+coverage-final.json
+lcov.info
+*.lcov
+reports/
+junit.xml
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Misc
+node_repl_history
+*.pid
+*.seed
+*.pid.lock
