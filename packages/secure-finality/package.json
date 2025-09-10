@@ -1,0 +1,61 @@
+{
+  "name": "secure-finality",
+  "version": "0.1.0",
+  "description": "Client-side secure finality for polkadot.js: tx.signAndSendSecure()",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuantumFusion-network/secure-finality-tools.git",
+    "directory": "packages/secure-finality"
+  },
+  "homepage": "https://github.com/QuantumFusion-network/secure-finality-tools",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "polkadot",
+    "substrate",
+    "finality",
+    "SPIN",
+    "polkadot.js",
+    "anchor",
+    "watermark"
+  ],
+  "peerDependencies": {
+    "@polkadot/api": ">=9.14.2 || >=10",
+    "@polkadot/types": ">=9.14.2 || >=10",
+    "@polkadot/util-crypto": ">=9.14.2 || >=10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm --target es2020 --clean",
+    "dev": "tsup src/index.ts --dts --format cjs,esm --target es2020 --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
+  }
+}
